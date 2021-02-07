@@ -2,21 +2,20 @@
 
 **$> alosaur new**
 
-| Property    |             | Description |
-| ----------- | ----------- | ----------- |
-| -blank      | `default`, `spa`, `static`, `cors`, `auth`, `ws` and etc, or specific path | Generate default application with collections in Alosaur examples or specific path resource |
-
+| Property |                                                                            | Description                                                                                 |
+| -------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| -blank   | `default`, `spa`, `static`, `cors`, `auth`, `ws` and etc, or specific path | Generate default application with collections in Alosaur examples or specific path resource |
 
 **$> alosaur g**
 
-| Property    | Alias       | Description |
-| ----------- | ----------- | ----------- |
-| area        | a           | Generate area |
-| controller  | c           | Generate controller |
-| class       |             | Generate class |
-| service     | s           | Generate service with `@Injectable` decorator |
-| hook        | h           | Generate hook |
-| middleware  | m           | Generate middleware |
+| Property   | Alias | Description                                   |
+| ---------- | ----- | --------------------------------------------- |
+| area       | a     | Generate area                                 |
+| controller | c     | Generate controller                           |
+| class      |       | Generate class                                |
+| service    | s     | Generate service with `@Injectable` decorator |
+| hook       | h     | Generate hook                                 |
+| middleware | m     | Generate middleware                           |
 
 **$> alosaur openapi**
 

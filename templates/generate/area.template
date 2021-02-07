@@ -1,0 +1,6 @@
+import { Area } from "https://deno.land/x/alosaur@v0.28.0/mod.ts";
+
+@Area({
+    controllers: [],
+})
+export class {{#classify}}{{name}}{{/classify}}Area {}

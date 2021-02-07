@@ -1,0 +1,15 @@
+import { HookTarget, Context } from "https://deno.land/x/alosaur@v0.28.0/mod.ts";
+
+type PayloadType = string;
+type State = any;
+
+export class {{#classify}}{{name}}{{/classify}}Hook implements HookTarget<State, PayloadType> {
+  onPreAction(context: Context<State>, payload: PayloadType) {
+  }
+
+  onPostAction(context: Context<State>, payload: PayloadType) {
+  }
+
+  onCatchAction(context: Context<State>, payload: PayloadType) {
+  }
+}

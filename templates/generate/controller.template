@@ -1,0 +1,11 @@
+import { Controller, Get } from "https://deno.land/x/alosaur@v0.28.0/mod.ts";
+
+@Controller('{{name}}')
+export class {{#classify}}{{name}}{{/classify}}Controller {
+    constructor() {}
+
+    @Get("/")
+    getDefault() {
+        return "";
+    }
+}
