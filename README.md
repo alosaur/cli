@@ -1,13 +1,10 @@
 # Command interface for Alosaur application
 
-
 ## Getting start
 
 In local, run
 
 `deno run --allow-read --allow-write  mod.ts g c home`
-
-
 
 ## Commands
 
