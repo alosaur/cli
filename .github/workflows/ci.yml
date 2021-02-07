@@ -18,5 +18,5 @@ jobs:
       - name: fmt check
         run: deno fmt --check
 
-      - name: Test
-        run: deno test -A
+#      - name: Test
+#        run: deno test -A
