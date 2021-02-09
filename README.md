@@ -13,7 +13,7 @@ deno run --allow-read --allow-write --allow-net mod.ts g c home
 
 ## Commands
 
-**$> alosaur new**
+**$> [WIP] alosaur new**
 
 | Property |                                                                            | Description                                                                                 |
 | -------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -31,15 +31,15 @@ deno run --allow-read --allow-write --allow-net mod.ts g c home
 | middleware | m     | Generate middleware                                                                                                                                                                                                                      |
 | path       |       | Generate one template file from url, template support the Mustache render. Example: `deno run --allow-read --allow-write --allow-net https://raw.githubusercontent.com/alosaur/cli/main/mod.ts path http://myhost.com/test.template name |
 
-**$> alosaur openapi**
+**$> [WIP] alosaur openapi**
 
 Build openapi docs to specific path or default to 'openapi.json'
 
-**$> alosaur e2e**
+**$> [WIP] alosaur e2e**
 
 E2E tests to REST or websockets endpoints
 
-**$> alosaur test**
+**$> [WIP] alosaur test**
 
 Wrapper over `deno test`
 
