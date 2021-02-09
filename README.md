@@ -41,6 +41,8 @@ Example:
 > https://raw.githubusercontent.com/alosaur/cli/main/mod.ts path
 > http://myhost.com/test.template name
 
+### alosaur help [TODO]
+
 ### alosaur openapi [TODO]
 
 Build openapi docs to specific path or default to 'openapi.json'
