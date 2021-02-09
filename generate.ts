@@ -1,8 +1,11 @@
-import { renderFile } from "https://deno.land/x/mustache/mod.ts";
+import { render } from "https://deno.land/x/mustache/mod.ts";
 import { dasherize } from "./string.utils.ts";
 import { TemplateHelpers } from "./template.helpers.ts";
 const { args } = Deno;
 const encoder = new TextEncoder();
+
+const baseUrl =
+  "https://raw.githubusercontent.com/alosaur/cli/main/templates/generate/";
 
 const TEMPLATES = new Map([
   ["area", "area"],
@@ -34,8 +37,14 @@ export async function generate() {
   }
 
   const template = TEMPLATES.get(templateAlias);
+
   const fileOutputName = `${dasherize(name)}.${template}.ts`;
-  const fileContent = await renderFile("./templates/generate/area.template", {
+
+  const body = await fetch(`${baseUrl}${template}.template`).then((r) =>
+    r.text()
+  );
+
+  const fileContent = await render(body, {
     ...TemplateHelpers,
     name,
   });

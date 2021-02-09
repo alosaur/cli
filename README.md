@@ -1,10 +1,15 @@
-# Command interface for Alosaur application
+# [WIP] Command interface for Alosaur application
+
+`deno run --allow-read --allow-write --allow-net https://raw.githubusercontent.com/alosaur/cli/main/mod.ts`
 
 ## Getting start
 
 In local, run
 
-`deno run --allow-read --allow-write  mod.ts g c home`
+```
+// generate component home
+deno run --allow-read --allow-write --allow-net mod.ts g c home
+```
 
 ## Commands
 
