@@ -41,15 +41,15 @@ Example:
 > https://raw.githubusercontent.com/alosaur/cli/main/mod.ts path
 > http://myhost.com/test.template name
 
-### alosaur openapi [WIP]
+### alosaur openapi [TODO]
 
 Build openapi docs to specific path or default to 'openapi.json'
 
-### alosaur e2e [WIP]
+### alosaur e2e [TODO]
 
 E2E tests to REST or websockets endpoints
 
-### alosaur test [WIP]
+### alosaur test [TODO]
 
 Wrapper over `deno test`
 
