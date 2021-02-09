@@ -23,8 +23,7 @@ deno run --allow-read --allow-write --allow-net mod.ts g c home
 
 Generate template.
 
-Example: 
-`alosaur g controller name`
+Example: `alosaur g controller name`
 
 | Property   | Alias | Description                                   |
 | ---------- | ----- | --------------------------------------------- |
