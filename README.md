@@ -13,35 +13,47 @@ deno run --allow-read --allow-write --allow-net mod.ts g c home
 
 ## Commands
 
-**$> [WIP] alosaur new**
+### alosaur new [WIP]
 
 | Property |                                                                            | Description                                                                                 |
 | -------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | -blank   | `default`, `spa`, `static`, `cors`, `auth`, `ws` and etc, or specific path | Generate default application with collections in Alosaur examples or specific path resource |
 
-**$> alosaur g**
+### alosaur g
 
-| Property   | Alias | Description                                                                                                                                                                                                                              |
-| ---------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area       | a     | Generate area                                                                                                                                                                                                                            |
-| controller | c     | Generate controller                                                                                                                                                                                                                      |
-| class      |       | Generate class                                                                                                                                                                                                                           |
-| service    | s     | Generate service with `@Injectable` decorator                                                                                                                                                                                            |
-| hook       | h     | Generate hook                                                                                                                                                                                                                            |
-| middleware | m     | Generate middleware                                                                                                                                                                                                                      |
-| path       |       | Generate one template file from url, template support the Mustache render. Example: `deno run --allow-read --allow-write --allow-net https://raw.githubusercontent.com/alosaur/cli/main/mod.ts path http://myhost.com/test.template name |
+Generate template.
 
-**$> [WIP] alosaur openapi**
+Example: 
+`alosaur g controller name`
+
+| Property   | Alias | Description                                   |
+| ---------- | ----- | --------------------------------------------- |
+| area       | a     | Generate area                                 |
+| controller | c     | Generate controller                           |
+| class      |       | Generate class                                |
+| service    | s     | Generate service with `@Injectable` decorator |
+| hook       | h     | Generate hook                                 |
+| middleware | m     | Generate middleware                           |
+| path       |       | *                                             |
+
+> *path: Generate one template file from url, template support the Mustache
+> render. Example: `deno run --allow-read --allow-write --allow-net
+> https://raw.githubusercontent.com/alosaur/cli/main/mod.ts path
+> http://myhost.com/test.template name
+
+### alosaur openapi [WIP]
 
 Build openapi docs to specific path or default to 'openapi.json'
 
-**$> [WIP] alosaur e2e**
+### alosaur e2e [WIP]
 
 E2E tests to REST or websockets endpoints
 
-**$> [WIP] alosaur test**
+### alosaur test [WIP]
 
 Wrapper over `deno test`
+
+---
 
 ## Contributing
 
