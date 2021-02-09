@@ -18,22 +18,36 @@ const TEMPLATES = new Map([
   ["h", "hook"],
   ["middleware", "middleware"],
   ["m", "middleware"],
+  ["path", "path"],
 ]);
 
 export async function generate() {
   const templateAlias = args[1];
-  const name = args[2];
 
   if (!templateAlias) {
-    throw new Error("Template alias not found");
+    console.error("Template alias not found");
   }
 
+  if (templateAlias === "path") {
+    await generateFromUrl();
+  } else {
+    await generateByTemplate();
+  }
+}
+
+/**
+ * Generate files from templates/generate
+ */
+async function generateByTemplate() {
+  const templateAlias = args[1];
+  const name = args[2];
+
   if (!name) {
-    throw new Error(`name argument not found`);
+    console.error(`name argument not found`);
   }
 
   if (!TEMPLATES.has(templateAlias)) {
-    throw new Error(`Template ${templateAlias} not found`);
+    console.error(`Template ${templateAlias} not found`);
   }
 
   const template = TEMPLATES.get(templateAlias);
@@ -44,10 +58,40 @@ export async function generate() {
     r.text()
   );
 
+  await renderAndWrite(fileOutputName, body, name);
+}
+
+/**
+ * Generate from path with default renderer Mustach
+ */
+async function generateFromUrl() {
+  const path = args[2];
+  const name = args[3];
+
+  if (!path) {
+    console.error(`path argument not found`);
+  }
+  if (!name) {
+    console.error(`name argument not found`);
+  }
+
+  try {
+    const body = await fetch(path).then((r) => r.text());
+
+    const fileOutputName = `${dasherize(name)}.ts`;
+
+    await renderAndWrite(fileOutputName, body, name);
+  } catch (e) {
+    console.error(`Error: `, e);
+    return;
+  }
+}
+
+async function renderAndWrite(outputName: string, body: string, name: string) {
   const fileContent = await render(body, {
     ...TemplateHelpers,
     name,
   });
 
-  await Deno.writeFile(fileOutputName, encoder.encode(fileContent));
+  await Deno.writeFile(outputName, encoder.encode(fileContent));
 }
