@@ -11,13 +11,26 @@ In local, run
 deno run --allow-read --allow-write --allow-net mod.ts g c home
 ```
 
+## Enviroments
+
+The Github API is used to generate templates. By default Github has some
+limitation, in most cases this limitation should be enough. But if you exceed
+this limit you can run the generation script with env variable GITHUB_TOKEN.
+Example:
+`GITHUB_TOKEN=123 deno run --allow-read --allow-write --allow-net mod.ts new basic MyProject`
+
+> Generate personal tokens: https://github.com/settings/tokens > new token >
+> Select scopes > check "Access public repositories"
+
 ## Commands
 
-### alosaur new [WIP]
+### alosaur new
 
-| Property |                                                                            | Description                                                                                 |
-| -------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| -blank   | `default`, `spa`, `static`, `cors`, `auth`, `ws` and etc, or specific path | Generate default application with collections in Alosaur examples or specific path resource |
+`deno run --allow-read --allow-write --allow-net mod.ts new basic MyApp`
+
+| Property                                                        | Description                                                                                 |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `basic`, `cors`, `db`, `default`, `handlebars`, `spa`, `static` | Generate default application with collections in Alosaur examples or specific path resource |
 
 ### alosaur g
 
