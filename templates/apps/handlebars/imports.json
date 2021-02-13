@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "alosaur/": "https://deno.land/x/alosaur/",
+    "handlebars/": "https://deno.land/x/handlebars@v0.2.2/"
+  }
+}
