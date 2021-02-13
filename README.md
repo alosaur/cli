@@ -1,4 +1,4 @@
-# [WIP] Command interface for Alosaur application
+# Command interface for Alosaur application
 
 `deno run --allow-read --allow-write --allow-net https://raw.githubusercontent.com/alosaur/cli/main/cli.ts`
 
