@@ -1,19 +1,14 @@
+import { Controller, ForbiddenError, Request, Response } from "alosaur/mod.ts";
 import {
-  Controller,
-  ForbiddenError,
-  Request,
-  Response,
-} from "alosaur/mod.ts";
-import {
-  Get,
-  QueryParam,
+  Body,
   Cookie,
+  Delete,
+  Get,
+  Param,
+  Post,
+  QueryParam,
   Req,
   Res,
-  Post,
-  Body,
-  Param,
-  Delete,
 } from "alosaur/src/decorator/mod.ts";
 
 @Controller("/home")

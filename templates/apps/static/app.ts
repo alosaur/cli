@@ -1,8 +1,4 @@
-import {
-  Cookie,
-  setCookie,
-  getCookies,
-} from "http/cookie.ts";
+import { Cookie, getCookies, setCookie } from "http/cookie.ts";
 import { Response } from "http/server.ts";
 import {
   App,
