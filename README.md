@@ -1,6 +1,6 @@
 # [WIP] Command interface for Alosaur application
 
-`deno run --allow-read --allow-write --allow-net https://raw.githubusercontent.com/alosaur/cli/main/mod.ts`
+`deno run --allow-read --allow-write --allow-net https://raw.githubusercontent.com/alosaur/cli/main/cli.ts`
 
 ## Getting start
 
@@ -17,7 +17,7 @@ The Github API is used to generate templates. By default Github has some
 limitation, in most cases this limitation should be enough. But if you exceed
 this limit you can run the generation script with env variable GITHUB_TOKEN.
 Example:
-`GITHUB_TOKEN=123 deno run --allow-read --allow-write --allow-net mod.ts new basic MyProject`
+`GITHUB_TOKEN=123 deno run --allow-read --allow-write --allow-net cli.ts new basic MyProject`
 
 > Generate personal tokens: https://github.com/settings/tokens > new token >
 > Select scopes > check "Access public repositories"
@@ -26,7 +26,7 @@ Example:
 
 ### alosaur new
 
-`deno run --allow-read --allow-write --allow-net mod.ts new basic MyApp`
+`deno run --allow-read --allow-write --allow-net cli.ts new basic MyApp`
 
 | Property                                                        | Description                                                                                 |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
