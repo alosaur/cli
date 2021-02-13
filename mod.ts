@@ -1,5 +1,5 @@
 import { generate } from "./generate.ts";
-import {newBlank} from "./new.ts";
+import { newBlank } from "./new.ts";
 
 const { args } = Deno;
 

@@ -18,8 +18,7 @@ export async function generateFromUrl(
 
     await renderAndWrite(fileOutputName, body, name);
   } catch (e) {
-    console.error(`Error: `, e);
-    return;
+    throw e;
   }
 }
 
@@ -37,8 +36,30 @@ export async function renderAndWrite(
     name,
   });
 
-  await Deno.create(fileOutputName);
-  await Deno.writeFile(fileOutputName, encoder.encode(fileContent), {
-    append: true,
-  });
+  const path = dasherize(name) + fileOutputName;
+
+  await createDirs(path);
+
+  const f = await Deno.create(path);
+  await f.write(encoder.encode(fileContent));
+  await f.close();
+
+  console.log(path);
+}
+
+const createdDirs = new Set();
+
+async function createDirs(path: string) {
+  const dirs = path.split("/");
+
+  let needDir = "";
+
+  for (let i = 0; i < dirs.length - 1; i++) {
+    needDir += dirs[i] + "/";
+
+    if (!createdDirs.has(needDir)) {
+      await Deno.mkdir(needDir);
+    }
+    createdDirs.add(needDir);
+  }
 }

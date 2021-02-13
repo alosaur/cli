@@ -1,6 +1,6 @@
 {
   "imports": {
-    "alosaur/": "https://deno.land/x/alosaur/",
+    "alosaur/": "https://deno.land/x/alosaur@v.0.28.0/",
     "handlebars/": "https://deno.land/x/handlebars@v0.2.2/"
   }
 }
