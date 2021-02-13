@@ -1,4 +1,4 @@
-# {{#classify}}{{name}}{{/classify}}
+# Name
 
 This boilerplate contains CORS implementation of Alosaur web framework.
 

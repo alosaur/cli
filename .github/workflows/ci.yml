@@ -8,13 +8,13 @@ jobs:
     strategy:
       matrix:
         deno: [1.7.1]
-    name: Deno ${{ matrix.deno }}
+    name: Deno $
     steps:
       - uses: actions/checkout@master
       - name: Setup deno
         uses: denolib/setup-deno@master
         with:
-          deno-version: ${{ matrix.deno }}
+          deno-version: $
       - name: fmt check
         run: deno fmt --check
 

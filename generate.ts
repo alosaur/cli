@@ -1,6 +1,8 @@
+import { render } from "https://deno.land/x/mustache/mod.ts";
 import { dasherize } from "./string.utils.ts";
-import { generateFromUrl, renderAndWrite } from "./render.utils.ts";
+import { TemplateHelpers } from "./template.helpers.ts";
 const { args } = Deno;
+const encoder = new TextEncoder();
 
 const baseUrl =
   "https://raw.githubusercontent.com/alosaur/cli/main/templates/generate/";
@@ -23,24 +25,12 @@ export async function generate() {
   const templateAlias = args[1];
 
   if (!templateAlias) {
-    throw new Error("Template alias not found");
+    console.error("Template alias not found");
   }
 
   if (templateAlias === "path") {
-    const path = args[2];
-    const name = args[3];
-
-    if (!path) {
-      throw new Error(`path argument not found`);
-    }
-    if (!name) {
-      throw new Error(`name argument not found`);
-    }
-
-    await generateFromUrl(path, "", name);
+    await generateFromUrl();
   } else {
-
-
     await generateByTemplate();
   }
 }
@@ -53,11 +43,11 @@ async function generateByTemplate() {
   const name = args[2];
 
   if (!name) {
-    throw new Error(`name argument not found`);
+    console.error(`name argument not found`);
   }
 
   if (!TEMPLATES.has(templateAlias)) {
-    throw new Error(`Template ${templateAlias} not found`);
+    console.error(`Template ${templateAlias} not found`);
   }
 
   const template = TEMPLATES.get(templateAlias);
@@ -69,4 +59,39 @@ async function generateByTemplate() {
   );
 
   await renderAndWrite(fileOutputName, body, name);
+}
+
+/**
+ * Generate from path with default renderer Mustach
+ */
+async function generateFromUrl() {
+  const path = args[2];
+  const name = args[3];
+
+  if (!path) {
+    console.error(`path argument not found`);
+  }
+  if (!name) {
+    console.error(`name argument not found`);
+  }
+
+  try {
+    const body = await fetch(path).then((r) => r.text());
+
+    const fileOutputName = `${dasherize(name)}.ts`;
+
+    await renderAndWrite(fileOutputName, body, name);
+  } catch (e) {
+    console.error(`Error: `, e);
+    return;
+  }
+}
+
+async function renderAndWrite(outputName: string, body: string, name: string) {
+  const fileContent = await render(body, {
+    ...TemplateHelpers,
+    name,
+  });
+
+  await Deno.writeFile(outputName, encoder.encode(fileContent));
 }

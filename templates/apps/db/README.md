@@ -1,4 +1,4 @@
-# {{#classify}}{{name}}{{/classify}}
+# Name
 
 This boilerplate contains DB implementation of Alosaur web framework.
 
