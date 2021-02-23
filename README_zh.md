@@ -1,5 +1,3 @@
-[中文说明](https://github.com/alosaur/cli/blob/master/README_zh.md)
-
 # Alosaur命令行工具 (CLI)
 
 `deno run --allow-read --allow-write --allow-net https://deno.land/alosaur/cli.ts`

@@ -1,3 +1,5 @@
+[中文说明](https://github.com/alosaur/cli/blob/master/README_zh.md)
+
 # Command interface for Alosaur application
 
 `deno run --allow-read --allow-write --allow-net https://deno.land/alosaur/cli.ts`
