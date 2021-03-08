@@ -2,17 +2,17 @@
 
 # Command interface for Alosaur application
 
-`deno run --allow-read --allow-write --allow-net https://deno.land/alosaur/cli.ts`
+`deno run --allow-read --allow-write --allow-net https://deno.land/x/alosaur/cli.ts`
 
 ## Getting start
 
 For generate static files
 
-`deno run --allow-read --allow-write --allow-net https://deno.land/alosaur/cli.ts g controller testName`
+`deno run --allow-read --allow-write --allow-net https://deno.land/x/alosaur/cli.ts g controller testName`
 
 For generate project
 
-`deno run --allow-read --allow-write --allow-net https://deno.land/alosaur/cli.ts new default myProject`
+`deno run --allow-read --allow-write --allow-net https://deno.land/x/alosaur/cli.ts new default myProject`
 
 In local, run
 
