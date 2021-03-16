@@ -65,7 +65,7 @@ Example: `alosaur g controller name`
 
 ### alosaur run [TODO]
 
-Run multiple applications
+Run multiple applications with configs
 
 ### alosaur help [TODO]
 
