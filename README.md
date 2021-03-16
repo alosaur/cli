@@ -63,6 +63,10 @@ Example: `alosaur g controller name`
 > https://raw.githubusercontent.com/alosaur/cli/main/mod.ts path
 > http://myhost.com/test.template name
 
+### alosaur run [TODO]
+
+Run multiple applications
+
 ### alosaur help [TODO]
 
 ### alosaur openapi [TODO]
