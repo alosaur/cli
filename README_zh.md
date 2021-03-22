@@ -60,7 +60,9 @@ API来生成模板。默认情况下Github对于API的使用有一些限制，�
 > https://raw.githubusercontent.com/alosaur/cli/main/mod.ts path
 > http://myhost.com/test.template name
 
-### alosaur help [TODO]
+### alosaur run [TODO]
+
+使用配置文件可以一次同时执行多个程序### alosaur help [TODO]
 
 ### alosaur openapi [TODO]
 
