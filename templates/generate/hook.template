@@ -1,4 +1,4 @@
-import { HookTarget, Context } from "https://deno.land/x/alosaur@v0.28.0/mod.ts";
+import { HookTarget, Context } from "https://deno.land/x/alosaur@v0.34.0/mod.ts";
 
 type PayloadType = string;
 type State = any;

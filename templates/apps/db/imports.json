@@ -1,6 +1,6 @@
 {
   "imports": {
-    "alosaur/": "https://deno.land/x/alosaur@v.0.28.0/",
+    "alosaur/": "https://deno.land/x/alosaur@v0.34.0/",
     "postgres/": "https://deno.land/x/postgres/"
   }
 }

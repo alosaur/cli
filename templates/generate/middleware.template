@@ -1,4 +1,4 @@
-import { Middleware, Context } from "https://deno.land/x/alosaur@v0.28.0/mod.ts";
+import { Middleware, Context } from "https://deno.land/x/alosaur@v0.34.0/mod.ts";
 
 @Middleware(new RegExp("/"))
 export class {{#classify}}{{name}}{{/classify}}Middleware implements MiddlewareTarget<TState> {
