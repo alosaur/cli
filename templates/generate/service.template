@@ -1,4 +1,4 @@
-import { Injectable } from "https://deno.land/x/alosaur@v0.34.0/mod.ts";
+import { Injectable } from "https://deno.land/x/alosaur@v0.37.0/mod.ts";
 
 @Injectable()
 export class {{#classify}}{{name}}{{/classify}}Service {

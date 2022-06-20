@@ -1,4 +1,4 @@
-import { Controller, Get } from "https://deno.land/x/alosaur@v0.34.0/mod.ts";
+import { Controller, Get } from "https://deno.land/x/alosaur@v0.37.0/mod.ts";
 
 @Controller('{{name}}')
 export class {{#classify}}{{name}}{{/classify}}Controller {
